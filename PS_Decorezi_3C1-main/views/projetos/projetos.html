@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projetos - Estrutural Model</title>
+
+    <link rel="stylesheet" href="projetos.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="header">
+
+        <!-- DIV reservada para o logo -->
+        <div class="logo"></div>
+
+        <nav class="menu">
+
+            <a href="../index.html">INÍCIO</a>
+            <a href="../sobre-nos/sobre-nos.html">SOBRE-NÓS</a>
+            <a href="../projetos/projetos.html">PROJETOS</a>
+            <a href="../contatos/contatos.html">CONTATO</a>
+            <a href="../login/login.html">CONTA</a>
+
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================
+         ÁREA DE PROJETOS
+    ====================================== -->
+
+    <main class="projetos-container">
+
+        <div class="projetos-grid">
+
+            <!--
+                PRIMEIRO CARD
+
+                O + é o botão que abre o modal
+                de anexar imagens.
+            -->
+            <div class="projeto-card adicionar" onclick="abrirModalAnexo()">
+
+                <span class="mais">+</span>
+
+            </div>
+
+
+            <!--
+                Os outros cards ficam como
+                espaços reservados para imagens.
+            -->
+
+            <div class="projeto-card"></div>
+
+            <div class="projeto-card"></div>
+
+            <div class="projeto-card"></div>
+
+            <div class="projeto-card"></div>
+
+            <div class="projeto-card"></div>
+
+            <div class="projeto-card"></div>
+
+            <div class="projeto-card"></div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================
+         FUNDO ESCURO DOS MODAIS
+    ====================================== -->
+
+    <div id="overlay" class="overlay"></div>
+
+
+    <!-- =====================================
+         MODAL - NÃO LOGADO
+    ====================================== -->
+
+    <div id="modalLogin" class="modal modal-login">
+
+        <div class="modal-login-conteudo">
+
+            <h1>
+                PARECE QUE VOCÊ NÃO ESTA<br>
+                LOGADO EM NOSSO SITE
+            </h1>
+
+
+            <p class="login-descricao">
+                PARA ACESSAR PROJETOS
+            </p>
+
+
+            <button class="modal-link" onclick="irParaLogin()">
+                LOG EM SUA CONTA
+            </button>
+
+
+            <p class="ou">
+                OU
+            </p>
+
+
+            <button class="modal-link" onclick="irParaRegistro()">
+                REGISTRE-SE
+            </button>
+
+
+            <p class="site-texto">
+                EM NOSSO SITE
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         MODAL - ANEXAR PROJETO
+    ====================================== -->
+
+    <div id="modalAnexo" class="modal modal-anexo">
+
+        <div class="modal-anexo-conteudo">
+
+            <!-- Botão fechar -->
+
+            <button class="fechar" onclick="fecharModais()">
+                ×
+            </button>
+
+
+            <!-- =================================
+                 ÁREA DE UPLOAD
+            ================================== -->
+
+            <div class="upload-area">
+
+                <!--
+                    Div reservada para o ícone
+                    de anexo.
+                -->
+                <div class="icone-anexo">
+                    📎
+                </div>
+
+
+                <p>
+                    Anexe as imagens do cômodo que deseja<br>
+                    decorar
+                </p>
+
+                <p>
+                    de preferencia com boa iluminação e<br>
+                    mostrando todos os cantos do quarto
+                </p>
+
+                <!-- Input real para selecionar imagens -->
+
+                <input
+                    type="file"
+                    id="imagens"
+                    accept="image/*"
+                    multiple
+                >
+
+            </div>
+
+
+            <!-- =================================
+                 MEDIDAS
+            ================================== -->
+
+            <p class="medidas-titulo">
+                Informe as medidas do quarto
+            </p>
+
+
+            <div class="medidas">
+
+                <div class="medida">
+
+                    <label for="largura">
+                        largura:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="largura"
+                    >
+
+                </div>
+
+
+                <div class="medida">
+
+                    <label for="comprimento">
+                        comprimento:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="comprimento"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 CONFIRMAR
+            ================================== -->
+
+            <button class="confirmar" onclick="confirmarProjeto()">
+                confirmar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="projetos.js"></script>
+
+</body>
+
+</html>
